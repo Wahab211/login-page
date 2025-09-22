@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>God-Mark App Login</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --midnight:#1A1D3B;
+      --teal:#17C3B2;
+      --teal-strong:#12b9a7;
+      --soft-white:#F9F9F9;
+      --neutral:#A7A9BE;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, sans-serif;
+      background: linear-gradient(180deg,#0f1224 0%, #13162a 45%, #0e1220 100%);
+      color:var(--soft-white);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .phone{
+      width:360px;
+      height:720px;
+      border-radius:28px;
+      background: linear-gradient(180deg,#0b0d18, #07111f);
+      padding:26px;
+      box-shadow:0 30px 80px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.05);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .screen{
+      width:100%;
+      height:100%;
+      border-radius:16px;
+      background: linear-gradient(180deg, rgba(6,10,20,0.9), rgba(6,8,16,0.8));
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .screen:before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      opacity:0.04;
+      transform:scaleX(1.6);
+    }
+
+    .logo{
+      width:84px;
+      height:84px;
+      filter: drop-shadow(0 10px 30px rgba(23,195,178,0.16));
+    }
+
+    .title{
+      font-family:Montserrat, sans-serif;
+      font-size:22px;
+      font-weight:700;
+      margin:0;
+    }
+
+    .tagline{
+      color:var(--teal);
+      font-size:12px;
+      letter-spacing:1.4px;
+    }
+
+    .form{
+      width:100%;
+      max-width:280px;
+      background:rgba(255,255,255,0.02);
+      padding:18px;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      border:1px solid rgba(255,255,255,0.05);
+      z-index:2;
+    }
+
+    .form label{font-size:12px;color:var(--neutral)}
+    .form input{
+      width:100%;
+      padding:12px 14px;
+      border-radius:8px;
+      background:rgba(255,255,255,0.03);
+      color:var(--soft-white);
+      border:1px solid rgba(255,255,255,0.08);
+      font-size:14px;
+      outline:none;
+    }
+    .form input::placeholder{color:rgba(167,169,190,0.5)}
+
+    .btn{
+      background:linear-gradient(90deg,var(--teal-strong), var(--teal));
+      color:#07111f;
+      padding:12px 18px;
+      border-radius:10px;
+      border:none;
+      font-weight:600;
+      cursor:pointer;
+      text-align:center;
+      box-shadow:0 8px 36px rgba(23,195,178,0.14);
+    }
+
+    .muted{color:var(--neutral);font-size:13px;text-align:center}
+    .links{display:flex;gap:12px;font-size:13px;color:var(--neutral)}
+    .links a{color:var(--teal);text-decoration:none;font-weight:600}
+  </style>
+</head>
+
+<body>
+  <div class="phone">
+    <div class="screen">
+      <!-- Logo -->
+      <svg class="logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#17C3B2"/>
+            <stop offset="1" stop-color="#12b9a7"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(8,8) scale(0.76)">
+          <path d="M44 2 L88 70 L44 138 L0 70 Z" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M44 22 L72 70 L44 118 L16 70 Z" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M44 44 L60 70 L44 96 L28 70 Z" fill="url(#g1)"/>
+        </g>
+      </svg>
+
+      <h2 class="title">GOD-MARK</h2>
+      <div class="tagline">INNOVATING THE FUTURE</div>
+
+      <form class="form" onsubmit="return false;">
+        <div>
+          <label>Email</label>
+          <input type="email" placeholder="you@company.com" required>
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" placeholder="••••••••" required>
+        </div>
+        <button class="btn">Log In</button>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div class="muted">Forgot password?</div>
+          <div class="links"><a href="#">Sign Up</a></div>
+        </div>
+      </form>
+
+      <div class="muted" style="margin-top:10px">By continuing, you agree to our Terms & Privacy</div>
+    </div>
+  </div>
+</body>
+</html>
